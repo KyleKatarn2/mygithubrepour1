@@ -8,8 +8,8 @@ class Form extends Component {
             TODO - set initial state for link name and URL 
         */
     this.state = {
-      name: "",
-      URL: ""
+      linkName: "",
+      url: ""
     }
   }
 
@@ -17,9 +17,14 @@ class Form extends Component {
     /*
             TODO - Logic for changing state based on form changes
         */
-    this.setState({
-      
-    })
+    if (event.target.id === "link")
+      this.setState({
+        linkName: event.target.value,
+      })
+    else
+      this.setState({
+        url: event.target.value,
+      })
   }
 
   onFormSubmit = (event) => {
