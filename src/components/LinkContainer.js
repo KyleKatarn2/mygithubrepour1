@@ -26,6 +26,9 @@ class LinkContainer extends React.Component {
     /*
             TODO - Create logic to setState and add new favLink to favLinks array in state
         */
+    this.setState({
+      favLinks: [this.state.favLinks, favLink]
+    })
   }
 
   render() {
