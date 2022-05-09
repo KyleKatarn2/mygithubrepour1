@@ -1,10 +1,13 @@
 import React from 'react'
-// import Table from './Table';
-// import Form from './Form';
+import Table from './Table';
+import Form from './Form';
 
 class LinkContainer extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      favLinks: [],
+    }
     /* TODO - Create state object for storing favLinks */
   }
 
@@ -12,6 +15,11 @@ class LinkContainer extends React.Component {
     /*
             TODO - Create logic for setting the state to filter array and remove favLink at index
         */
+    const linkArray = this.state.favLinks
+    linkArray.splice(index, 1)
+    this.setState({
+      favLinks : linkArray
+    })
   }
 
   handleSubmit = (favLink) => {
@@ -25,12 +33,16 @@ class LinkContainer extends React.Component {
       <div className="container">
         <h1>My Favorite Links</h1>
         <p>Add a new url with a name and link to the table.</p>
-        {/*TODO - Add Table Component */}
+        {/*TODO - Add Table Component */
+          <Table />
+        }
 
         <br />
 
         <h3>Add New</h3>
-        {/*TODO - Add Form Component */}
+        {/*TODO - Add Form Component */
+          <Form />
+        }
       </div>
     )
   }

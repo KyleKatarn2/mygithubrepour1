@@ -7,12 +7,19 @@ class Form extends Component {
     /*
             TODO - set initial state for link name and URL 
         */
+    this.state = {
+      name: "",
+      URL: ""
+    }
   }
 
   handleChange = (event) => {
     /*
             TODO - Logic for changing state based on form changes
         */
+    this.setState({
+      
+    })
   }
 
   onFormSubmit = (event) => {
