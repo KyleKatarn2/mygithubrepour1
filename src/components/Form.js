@@ -34,7 +34,13 @@ class Form extends Component {
     /*
             TODO - Logic for calling props to handle submission and setting state changes
         */
-    
+    let newFavLink = {
+      linkName: this.state.linkName,
+      url: this.state.url
+    }
+
+    this.props.addNew(newFavLink)
+    this.setState({linkName: ", url: "})
     
   }
 
