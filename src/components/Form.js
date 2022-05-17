@@ -34,7 +34,7 @@ class Form extends Component {
     /*
             TODO - Logic for calling props to handle submission and setting state changes
         */
-    let newFavLink = {
+    const newFavLink = {
       linkName: this.state.linkName,
       url: this.state.url
     }
@@ -48,6 +48,11 @@ class Form extends Component {
     return (
       <form>
         {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
+        <label>Name</label>
+        <input type = "text" onChange = {this.handleChange} />
+        <label>URL</label>
+        <input type = "text" onChange = {this.handleChange} />
+        <button type="submit" onClick={this.onFormSubmit}>Submit</button>
       </form>
     )
   }

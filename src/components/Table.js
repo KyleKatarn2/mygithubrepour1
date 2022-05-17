@@ -38,7 +38,7 @@ const Table = (props) => {
   return (
     <table>
       <TableHeader />
-      <TableBody data={props.data} />
+      <TableBody linkData={props.linkData} removeLink = {props.removeLink}/>
     </table>
   )
 }
